@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Structure Visualizer</title>
+    <link rel="stylesheet" href="dsa.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2>Data Structures</h2>
+
+        <button onclick="showPage('arrayPage')">Array</button>
+        <button onclick="showPage('stackPage')">Stack</button>
+        <button onclick="showPage('queuePage')">Queue</button>
+        <button onclick="showPage('listPage')">Linked List</button>
+        <button onclick="showPage('treePage')">Tree</button>
+        <button onclick="showPage('graphPage')">Graph</button>
+    </div>
+
+    <div class="content">
+
+        <div id="home" class="page active">
+            <h1>Data Structure Visualizer</h1>
+            <p>Select a data structure from the left menu.</p>
+        </div>
+
+        <!-- ARRAY -->
+        <!-- ARRAY -->
+        <div id="arrayPage" class="page">
+
+            <h2>📦 Array Visualization</h2>
+
+            <input id="arrayInput" placeholder="Enter Value">
+
+            <button onclick="insertArray()">
+        Insert End
+    </button>
+
+            <button onclick="deleteArray()">
+        Delete Last
+    </button>
+
+            <br><br>
+
+            <input id="arrayIndex" placeholder="Enter Index">
+
+            <button onclick="insertAtIndex()">
+        Insert At Index
+    </button>
+
+            <button onclick="deleteAtIndex()">
+        Delete At Index
+    </button>
+
+            <br><br>
+
+            <input id="searchInput" placeholder="Search Element">
+
+            <button onclick="searchArray()">
+        Search
+    </button>
+            <button onclick="clearArray()">Clear All</button>
+
+            <br><br>
+
+            <div id="searchResult"></div>
+
+            <div id="arrayDisplay" class="display"></div>
+
+        </div>
+        <!-- STACK -->
+        <!-- STACK -->
+        <div id="stackPage" class="page">
+
+            <h2>📚 Stack Visualization</h2>
+
+            <input id="stackInput" placeholder="Enter Value">
+
+            <button onclick="pushStack()">
+        Push
+    </button>
+
+            <button onclick="popStack()">
+        Pop
+    </button>
+
+            <button onclick="peekStack()">
+        Peek
+    </button>
+            <button onclick="clearStack()">Clear All</button>
+
+            <br><br>
+
+            <div id="stackResult"></div>
+
+            <div id="stackDisplay" class="display stack-container"></div>
+
+        </div>
+        <!-- QUEUE -->
+        <!-- QUEUE -->
+        <div id="queuePage" class="page">
+
+            <h2>🚏 Queue Visualization</h2>
+
+            <input id="queueInput" placeholder="Enter Value">
+
+            <button onclick="enqueue()">
+        Enqueue
+    </button>
+
+            <button onclick="dequeue()">
+        Dequeue
+    </button>
+
+            <button onclick="peekQueue()">
+        Peek Front
+    </button>
+            <button onclick="clearQueue()">Clear All</button>
+
+            <br><br>
+
+            <div id="queueResult"></div>
+
+            <div id="queueDisplay" class="display queue-container">
+            </div>
+
+        </div>
+        <!-- LINKED LIST -->
+        <!-- LINKED LIST -->
+        <div id="listPage" class="page">
+
+            <h2>🔗 Linked List Visualization</h2>
+
+            <input id="listInput" placeholder="Enter Value">
+
+            <button onclick="insertAtBeginning()">
+        Insert Beginning
+    </button>
+
+            <button onclick="insertAtEnd()">
+        Insert End
+    </button>
+
+            <button onclick="deleteByValue()">
+        Delete Value
+    </button>
+            <button onclick="clearList()">Clear All</button>
+
+            <br><br>
+
+            <div id="listResult"></div>
+
+            <div id="listDisplay" class="display list-container">
+            </div>
+
+        </div>
+        <!-- TREE -->
+        <!-- TREE -->
+        <div id="treePage" class="page">
+
+            <h2>🌳 Binary Search Tree</h2>
+
+            <input id="treeInput" placeholder="Enter Number">
+
+            <button onclick="insertTree()">
+        Insert
+    </button>
+
+            <button onclick="inorderTraversal()">
+        Inorder
+    </button>
+
+            <button onclick="preorderTraversal()">
+        Preorder
+    </button>
+
+            <button onclick="postorderTraversal()">
+        Postorder
+    </button>
+            <button onclick="clearTree()">Clear All</button>
+
+            <br><br>
+
+            <div id="treeResult"></div>
+
+            <div id="treeDisplay" class="display tree-container">
+            </div>
+
+        </div>
+
+        <!-- GRAPH -->
+        <!-- GRAPH -->
+        <div id="graphPage" class="page">
+
+            <h2>🕸️ Graph Visualization</h2>
+
+            <input id="vertexInput" placeholder="Vertex">
+
+            <button onclick="addVertex()">
+        Add Vertex
+    </button>
+
+            <br><br>
+
+
+            <input id="sourceVertex" placeholder="Source">
+
+            <input id="destinationVertex" placeholder="Destination">
+
+            <button onclick="addEdge()">
+        Add Edge
+    </button>
+
+            <br><br>
+
+            <button onclick="bfsTraversal()">
+        BFS
+    </button>
+
+            <button onclick="dfsTraversal()">
+        DFS
+    </button>
+            <button onclick="clearGraph()">Clear All</button>
+
+            <br><br>
+
+            <div id="graphResult"></div>
+
+            <div id="graphDisplay" class="display graph-container">
+            </div>
+
+        </div>
+    </div>
+
+    <script src="dsa.js"></script>
+
+</body>
+
+</html>
